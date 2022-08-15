@@ -9,7 +9,6 @@
 	<meta name="description" content="Описание"><!--не более 140 символов-->
 	<meta name="keywords" content="Ключевики"><!--не более 20ти слов. Ключевые фразы разделяем запятой.-->
 	<meta name="image" content="img/meta-img/favicon.ico">
-	<meta name="robots" content="none"><!-- Управление доступом поисковых роботов к странице -->
 
 	<!--Парсинг социальными сетями-->
 	<meta property="og:type" content="website">
@@ -79,10 +78,10 @@
 								</div>
 								<nav class="menu__body">
 									<ul class="menu__list">
-										<li class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></li>
-										<li class="menu__item"><a href="#stages" class="menu__link">Этапы работы</a></li>
-										<li class="menu__item"><a href="#cases" class="menu__link">Кейсы</a></li>
-										<li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
+										<li class="menu__item"><a data-goto=".advantages" href="#" class="menu__link">Преимущества</a></li>
+										<li class="menu__item"><a data-goto=".stages" href="#" class="menu__link">Этапы работы</a></li>
+										<li class="menu__item"><a data-goto=".cases" href="#" class="menu__link">Кейсы</a></li>
+										<li class="menu__item"><a data-goto=".contacts" href="#" class="menu__link">Контакты</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -99,7 +98,7 @@
 						</div>
 						<div class="main-block__image">
 							<div class="main-block__strings">
-								<div class="main-block__string-wrap">
+								<div class="main-block__string-wrap" id="scroller_container">
 									<p class="main-block__string">AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU </p>
 								</div>
 								<div class="main-block__string-wrap">
@@ -289,8 +288,10 @@
 						<h2 class="cases__title title">кейсы</h2>
 						<div class="cases__slider">
 							<div class="cases__slid slid">
-								<h3 class="slid__title">Пластиковые окна и двери, балконы, москитные сетки</h3>
-								<div class="slid__text">Была запущена рекламная кампания для производителя окон. Упор был сделан на выкладку объявлений по подкатегории «Окна и балконы» и «Двери» (товарный сегмент). Отдельная часть ниши была занята за счет выкладки объявлений по подкатегории «Остекление балконов» (услуги). Таким образом, было занято около 40% ниши за счет размещения объявлений в двух разных категориях и привлечения разной целевой аудитории.<br><br>Результаты за месяц:<br><span>+113%</span> просмотров<br><span>+313%</span> контактов<br><span>+173%</span> добавлений в избранное<br>средняя стоимость контакта <span>59,92₽</span></div>
+								<div class="slid__block">
+									<h3 class="slid__title">Пластиковые окна и двери, балконы, москитные сетки</h3>
+									<div class="slid__text">Была запущена рекламная кампания для производителя окон. Упор был сделан на выкладку объявлений по подкатегории «Окна и балконы» и «Двери» (товарный сегмент). Отдельная часть ниши была занята за счет выкладки объявлений по подкатегории «Остекление балконов» (услуги). Таким образом, было занято около 40% ниши за счет размещения объявлений в двух разных категориях и привлечения разной целевой аудитории.<br><br>Результаты за месяц:<br><span>+113%</span> просмотров<br><span>+313%</span> контактов<br><span>+173%</span> добавлений в избранное<br>средняя стоимость контакта <span>59,92₽</span></div>
+								</div>
 								<div class="slid__body">
 									<div class="slid__buttons">
 										<button class="slid__button slid__button_before">До</button>
@@ -303,8 +304,10 @@
 								</div>
 							</div>
 							<div class="cases__slid slid">
-								<h3 class="slid__title">Тахографы и Глонасс, карты водителя</h3>
-								<div class="slid__text">Была запущена реклама для компании, которая занимается продажей тахографов и карт водителя, а также Глонасс трекеров. Целевая аудитория – водители габаритных ТС (грузовики, фуры, автобусы и т.д.). Был сделан упор на широкое гео, за счет чего удалось занять 25-30% ниши.<br><br>Результаты за месяц:<br><span>+164%</span> просмотров<br><span>+127%</span> контактов<br><span>+147%</span> добавлений в избранное<br>средняя стоимость контакта <span>11,90₽</span></div>
+								<div class="slid__block">
+									<h3 class="slid__title">Тахографы и Глонасс, карты водителя</h3>
+									<div class="slid__text">Была запущена реклама для компании, которая занимается продажей тахографов и карт водителя, а также Глонасс трекеров. Целевая аудитория – водители габаритных ТС (грузовики, фуры, автобусы и т.д.). Был сделан упор на широкое гео, за счет чего удалось занять 25-30% ниши.<br><br>Результаты за месяц:<br><span>+164%</span> просмотров<br><span>+127%</span> контактов<br><span>+147%</span> добавлений в избранное<br>средняя стоимость контакта <span>11,90₽</span></div>
+								</div>
 								<div class="slid__body">
 									<div class="slid__buttons">
 										<button class="slid__button slid__button_before">До</button>
@@ -317,8 +320,10 @@
 								</div>
 							</div>
 							<div class="cases__slid slid">
-								<h3 class="slid__title">Электроника и аксессуары для автомобиля</h3>
-								<div class="slid__text">Была запущена реклама для компании, занимающейся продажей различной электроники и аксессуаров. Был сделан упор на выкладку всех высокомаржинальных товарных позиций из ассортимента, за счет чего было занято около 30% ниши; также активно применялись платные услуги продвижения.<br><br>Результаты за месяц:<br><span>+18%</span> просмотров<br><span>+19%</span> контактов<br>средняя стоимость контакта <span>115,5₽</span></div>
+								<div class="slid__block">
+									<h3 class="slid__title">Электроника и аксессуары для автомобиля</h3>
+									<div class="slid__text">Была запущена реклама для компании, занимающейся продажей различной электроники и аксессуаров. Был сделан упор на выкладку всех высокомаржинальных товарных позиций из ассортимента, за счет чего было занято около 30% ниши; также активно применялись платные услуги продвижения.<br><br>Результаты за месяц:<br><span>+18%</span> просмотров<br><span>+19%</span> контактов<br>средняя стоимость контакта <span>115,5₽</span></div>
+								</div>
 								<div class="slid__body">
 									<div class="slid__buttons">
 										<button class="slid__button slid__button_before">До</button>
@@ -339,7 +344,7 @@
 					<div class="contacts__wrap">
 						<h2 class="contacts__title title">контакты</h2>
 						<div class="contacts__buttons">
-							<a href="#" class="contacts__button contacts__button_telegram">
+							<a href="https://t.me/yukhnels" class="contacts__button contacts__button_telegram">
 								<div class="contacts__btn">
 									<svg class="contacts__img" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M82.2938 10.3686C81.4852 9.69842 80.5103 9.2595 79.4724 9.09841C78.4346 8.93732 77.3725 9.06007 76.3988 9.45364L9.21002 36.5774C8.12429 37.0236 7.19993 37.7894 6.55966 38.7732C5.91939 39.7571 5.59349 40.9124 5.62522 42.0858C5.65696 43.2592 6.04483 44.3952 6.73734 45.343C7.42986 46.2908 8.39426 47.0056 9.50252 47.3924L24 52.4249L31.8563 78.3974C31.8713 78.4499 31.92 78.4836 31.9425 78.5324C32.0235 78.7396 32.1417 78.9303 32.2913 79.0949C32.5186 79.3488 32.812 79.5344 33.1388 79.6311C33.1763 79.6461 33.2025 79.6799 33.24 79.6874H33.2625L33.2738 79.6911C33.5639 79.7536 33.8654 79.7381 34.1475 79.6461C34.1775 79.6386 34.2075 79.6386 34.2413 79.6274C34.5122 79.5323 34.7574 79.3757 34.9575 79.1699C34.98 79.1436 35.0175 79.1399 35.04 79.1174L46.3388 66.6449L62.8275 79.4137C63.8288 80.1974 65.0625 80.6211 66.3338 80.6211C69.0863 80.6211 71.46 78.6936 72.0263 76.0049L84.2588 15.9374C84.4663 14.9177 84.3931 13.8608 84.047 12.8794C83.701 11.898 83.095 11.0289 82.2938 10.3649V10.3686ZM35.955 57.3561L33.3038 70.2449L27.7725 51.9524L55.2038 37.6649L36.465 56.4074C36.2055 56.6667 36.0282 56.9967 35.955 57.3561ZM68.3513 75.2511C68.2809 75.5912 68.1242 75.9074 67.8963 76.1694C67.6684 76.4315 67.377 76.6305 67.05 76.7474C66.731 76.8702 66.3855 76.9078 66.0475 76.8565C65.7095 76.8052 65.3908 76.6668 65.1225 76.4549L47.2613 62.6211C46.8879 62.3329 46.4196 62.196 45.9498 62.2377C45.4799 62.2794 45.043 62.4967 44.7263 62.8461L36.8625 71.5124L39.51 58.6611L66.4688 31.6986C66.7845 31.3819 66.9766 30.9627 67.0104 30.5168C67.0442 30.0709 66.9175 29.6275 66.6532 29.2668C66.3889 28.906 66.0043 28.6517 65.5689 28.5495C65.1335 28.4474 64.6759 28.5043 64.2788 28.7099L25.4175 48.9524L10.7288 43.8449C10.3393 43.7163 9.99963 43.4695 9.757 43.1388C9.51436 42.8081 9.38085 42.41 9.37502 41.9999C9.35634 41.5862 9.46688 41.1769 9.69131 40.8288C9.91575 40.4807 10.2429 40.2111 10.6275 40.0574L77.805 12.9336C78.1493 12.7874 78.5275 12.7401 78.8972 12.7971C79.2668 12.854 79.6133 13.013 79.8975 13.2561C80.1801 13.4848 80.3937 13.7876 80.5142 14.1306C80.6347 14.4737 80.6575 14.8434 80.58 15.1986L68.3513 75.2549V75.2511Z"/>
@@ -348,7 +353,7 @@
 								</div>
 								<div class="contacts__text">@yukhnels</div>
 							</a>
-							<a href="#" class="contacts__button contacts__button_mail">
+							<a href="mailto:yukhnelsasha@gmail.com" class="contacts__button contacts__button_mail">
 								<div class="contacts__btn">
 									<svg class="contacts__img" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M77.5 20C80.8152 20 83.9947 21.317 86.3389 23.6612C88.6831 26.0054 90 29.1848 90 32.5V72.5C90 75.8152 88.6831 78.9946 86.3389 81.3388C83.9947 83.6831 80.8152 85 77.5 85H22.5C19.1848 85 16.0054 83.6831 13.6612 81.3388C11.317 78.9946 10 75.8152 10 72.5V32.5C10 29.1848 11.317 26.0054 13.6612 23.6612C16.0054 21.317 19.1848 20 22.5 20H77.5ZM85 39.805L51.27 59.655C50.9511 59.8422 50.5947 59.9564 50.2264 59.9892C49.858 60.0221 49.487 59.9728 49.14 59.845L48.73 59.655L15 39.815V72.5C15 74.4891 15.7902 76.3968 17.1967 77.8033C18.6032 79.2098 20.5109 80 22.5 80H77.5C79.4892 80 81.3968 79.2098 82.8033 77.8033C84.2098 76.3968 85 74.4891 85 72.5V39.805ZM77.5 25H22.5C20.5109 25 18.6032 25.7902 17.1967 27.1967C15.7902 28.6032 15 30.5109 15 32.5V34.01L50 54.6L85 34V32.5C85 30.5109 84.2098 28.6032 82.8033 27.1967C81.3968 25.7902 79.4892 25 77.5 25Z"/>
@@ -357,7 +362,7 @@
 								</div>
 								<div class="contacts__text">yukhnelsasha@gmail.com</div>
 							</a>
-							<a href="#" class="contacts__button contacts__button_whatsapp">
+							<a href="https://wa.me/89141725882" class="contacts__button contacts__button_whatsapp">
 								<div class="contacts__btn">
 									<svg class="contacts__img" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0_2_132)">
@@ -395,10 +400,10 @@
 							<div class="footer__menu menu">
 								<nav class="menu__body">
 									<ul class="menu__list">
-										<li class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></li>
-										<li class="menu__item"><a href="#stages" class="menu__link">Этапы работы</a></li>
-										<li class="menu__item"><a href="#cases" class="menu__link">Кейсы</a></li>
-										<li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
+										<li class="menu__item"><a data-goto=".advantages" href="#" class="menu__link">Преимущества</a></li>
+										<li class="menu__item"><a data-goto=".stages" href="#" class="menu__link">Этапы работы</a></li>
+										<li class="menu__item"><a data-goto=".cases" href="#" class="menu__link">Кейсы</a></li>
+										<li class="menu__item"><a data-goto=".contacts" href="#" class="menu__link">Контакты</a></li>
 									</ul>
 								</nav>
 							</div>

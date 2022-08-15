@@ -150,7 +150,6 @@ section {
 			width: 40px;
 			height: 30px;
 			cursor: pointer;
-			right: 0;
 			& span,
 			&::before,
 			&::after {
@@ -166,7 +165,6 @@ section {
 			&::before,
 			&::after {
 				content: '';
-				transform: rotate(0) translate(0px, -50%)
 			}
 			&::before {
 				top: 0;
@@ -175,7 +173,7 @@ section {
 				bottom: 0;
 			}
 			& span {
-				top: 45%;
+				top: 50%;
 				transform: scale(1) translate(0, -50%);
 			}
 		}
@@ -183,12 +181,13 @@ section {
 			transform: scale(0) translate(0px, -50%);
 		}
 		&__icon._active::before {
-			top: 50%;
-			transform: rotate(-45deg) translate(0px, -50%);
+			//top: 48%;
+			top: calc(50% - 1px);
+			transform: rotate(-45deg) translate(0 , -50%);
 		}
 		&__icon._active::after {
 			bottom: 50%;
-			transform: rotate(45deg) translate(0px, 50%);
+			transform: rotate(45deg) translate(0 , 50%);
 		}
 		&__body {
 			position: fixed;
@@ -328,23 +327,24 @@ section {
 	&__string-wrap {
 		display: flex;
 		align-items: center;
+		width: 6518.47px;
 		&:nth-child(1) .main-block__string {
-			animation: marquee 20s infinite linear;
+			animation: marquee 40s infinite linear;
 		}
-		&:nth-child(2) {
-			animation: marquee 16s infinite linear;
+		&:nth-child(2) .main-block__string {
+			animation: marquee 32s infinite linear;
 		}
-		&:nth-child(3) {
-			animation: marquee 22s infinite linear;
+		&:nth-child(3) .main-block__string {
+			animation: marquee 44s infinite linear;
 		}
-		&:nth-child(4) {
-			animation: marquee 18s infinite linear;
+		&:nth-child(4) .main-block__string {
+			animation: marquee 36s infinite linear;
 		}
-		&:nth-child(5) {
-			animation: marquee 24s infinite linear;
+		&:nth-child(5) .main-block__string {
+			animation: marquee 48s infinite linear;
 		}
-		&:nth-child(6) {
-			animation: marquee 28s infinite linear;
+		&:nth-child(6) .main-block__string {
+			animation: marquee 56s infinite linear;
 		}
 	}
 	&__string {
@@ -358,8 +358,8 @@ section {
 		text-transform: uppercase;
 		color: #8949BD;
 		white-space: nowrap;
+		left: 50%;
 		&:after {
-			display: inline;
 			content: "AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU ";
 		}
 		
@@ -391,7 +391,9 @@ section {
 		border-radius: 10px;
 		position: relative;
 		z-index: 1;
-		transition: background 0.6s ease 0s;
+		background-size: 200% auto;
+		background-position: 0% center;
+		transition: all 1s ease 0s;
 		&:after {
 			position: absolute;
 			z-index: 2;
@@ -415,20 +417,26 @@ section {
 			height: 100%;
 			padding: 31px 9px;
 			border-radius: 10px;
-			background-image: linear-gradient(89.98deg, #8949BD 0.01%, #FFFFFF 99.99%);
- 			color: transparent;
-			background-clip: text;
-			-webkit-background-clip: text;
 			position: relative;
 			z-index: 3;
-			transition: background-image 0.6s ease 0s;
+			background: linear-gradient(89.98deg, #8949BD 0.01%, #FFFFFF 99.99%);
+			background-size: 200% auto;
+			background-position: 0% center;
+			  
+			color: #fff;
+			background-clip: text;
+			text-fill-color: transparent;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			  
+			transition: all 1s ease 0s;
 		}
 		&:hover {
-			background: linear-gradient(89.98deg, #FFFFFF 0.01%, #FFFFFF 99.99%);
-			transition: background 0.6s ease 0s;
+			background-position: 100% center;
+			transition: all 1s ease 0s;
 			& span {
-				background-image: linear-gradient(89.98deg, #FFFFFF 0.01%, #FFFFFF 99.99%);
-				transition: background-image 0.6s ease 0s;
+				background-position: 100% center;
+				transition: all 1s ease 0s;
 			}
 		}
 	}
@@ -1057,12 +1065,23 @@ section {
 	padding: 35px 36px 26px 31px;
 	border: 2px solid #141414;
 	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 	&__title {
 		font-family: 'Ubuntu';
 		font-style: normal;
 		font-weight: 500;
 		font-size: 30px;
 		line-height: calc(34*100%/30);
+		margin-left: 0;
+		margin-right: auto;
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	&__block {
 		&:not(:last-child) {
 			margin-bottom: 15px;
 		}
@@ -1082,9 +1101,7 @@ section {
 		& span {
 			color: rgb(7, 182, 4);
 		}
-		&:not(:last-child) {
-			margin-bottom: 15px;
-		}
+		
 	}
 	&__buttons {
 		display: flex;
@@ -1173,12 +1190,14 @@ section {
 				margin-bottom: 10px;
 			}
 		}
-		&__text {
-			margin-left: 10px;
-			font-size: 15px;
+		&__block {
 			&:not(:last-child) {
 				margin-bottom: 28px;
 			}
+		}
+		&__text {
+			margin-left: 10px;
+			font-size: 15px;
 		}
 		&__buttons {
 			gap: 33px;

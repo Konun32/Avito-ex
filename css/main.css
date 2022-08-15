@@ -288,7 +288,6 @@ section:not(:last-child) {
     width: 40px;
     height: 30px;
     cursor: pointer;
-    right: 0;
   }
   .header .menu__icon span, .header .menu__icon::before, .header .menu__icon::after {
     left: 0;
@@ -302,8 +301,6 @@ section:not(:last-child) {
   }
   .header .menu__icon::before, .header .menu__icon::after {
     content: "";
-    -webkit-transform: rotate(0) translate(0px, -50%);
-            transform: rotate(0) translate(0px, -50%);
   }
   .header .menu__icon::before {
     top: 0;
@@ -312,7 +309,7 @@ section:not(:last-child) {
     bottom: 0;
   }
   .header .menu__icon span {
-    top: 45%;
+    top: 50%;
     -webkit-transform: scale(1) translate(0, -50%);
             transform: scale(1) translate(0, -50%);
   }
@@ -321,14 +318,14 @@ section:not(:last-child) {
             transform: scale(0) translate(0px, -50%);
   }
   .header .menu__icon._active::before {
-    top: 50%;
-    -webkit-transform: rotate(-45deg) translate(0px, -50%);
-            transform: rotate(-45deg) translate(0px, -50%);
+    top: calc(50% - 1px);
+    -webkit-transform: rotate(-45deg) translate(0, -50%);
+            transform: rotate(-45deg) translate(0, -50%);
   }
   .header .menu__icon._active::after {
     bottom: 50%;
-    -webkit-transform: rotate(45deg) translate(0px, 50%);
-            transform: rotate(45deg) translate(0px, 50%);
+    -webkit-transform: rotate(45deg) translate(0, 50%);
+            transform: rotate(45deg) translate(0, 50%);
   }
   .header .menu__body {
     position: fixed;
@@ -503,30 +500,31 @@ section:not(:last-child) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 6518.47px;
 }
 .main-block__string-wrap:nth-child(1) .main-block__string {
-  -webkit-animation: marquee 20s infinite linear;
-          animation: marquee 20s infinite linear;
+  -webkit-animation: marquee 40s infinite linear;
+          animation: marquee 40s infinite linear;
 }
-.main-block__string-wrap:nth-child(2) {
-  -webkit-animation: marquee 16s infinite linear;
-          animation: marquee 16s infinite linear;
+.main-block__string-wrap:nth-child(2) .main-block__string {
+  -webkit-animation: marquee 32s infinite linear;
+          animation: marquee 32s infinite linear;
 }
-.main-block__string-wrap:nth-child(3) {
-  -webkit-animation: marquee 22s infinite linear;
-          animation: marquee 22s infinite linear;
+.main-block__string-wrap:nth-child(3) .main-block__string {
+  -webkit-animation: marquee 44s infinite linear;
+          animation: marquee 44s infinite linear;
 }
-.main-block__string-wrap:nth-child(4) {
-  -webkit-animation: marquee 18s infinite linear;
-          animation: marquee 18s infinite linear;
+.main-block__string-wrap:nth-child(4) .main-block__string {
+  -webkit-animation: marquee 36s infinite linear;
+          animation: marquee 36s infinite linear;
 }
-.main-block__string-wrap:nth-child(5) {
-  -webkit-animation: marquee 24s infinite linear;
-          animation: marquee 24s infinite linear;
+.main-block__string-wrap:nth-child(5) .main-block__string {
+  -webkit-animation: marquee 48s infinite linear;
+          animation: marquee 48s infinite linear;
 }
-.main-block__string-wrap:nth-child(6) {
-  -webkit-animation: marquee 28s infinite linear;
-          animation: marquee 28s infinite linear;
+.main-block__string-wrap:nth-child(6) .main-block__string {
+  -webkit-animation: marquee 56s infinite linear;
+          animation: marquee 56s infinite linear;
 }
 .main-block__string {
   display: inline;
@@ -539,9 +537,9 @@ section:not(:last-child) {
   text-transform: uppercase;
   color: #8949BD;
   white-space: nowrap;
+  left: 50%;
 }
 .main-block__string:after {
-  display: inline;
   content: "AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU AVITO.RU ";
 }
 .main-block__img {
@@ -574,8 +572,10 @@ section:not(:last-child) {
   border-radius: 10px;
   position: relative;
   z-index: 1;
-  -webkit-transition: background 0.6s ease 0s;
-  transition: background 0.6s ease 0s;
+  background-size: 200% auto;
+  background-position: 0% center;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 .main-block__button:after {
   position: absolute;
@@ -602,24 +602,28 @@ section:not(:last-child) {
   height: 100%;
   padding: 31px 9px;
   border-radius: 10px;
-  background-image: linear-gradient(89.98deg, #8949BD 0.01%, #FFFFFF 99.99%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
   position: relative;
   z-index: 3;
-  -webkit-transition: background-image 0.6s ease 0s;
-  transition: background-image 0.6s ease 0s;
+  background: linear-gradient(89.98deg, #8949BD 0.01%, #FFFFFF 99.99%);
+  background-size: 200% auto;
+  background-position: 0% center;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 .main-block__button:hover {
-  background: linear-gradient(89.98deg, #FFFFFF 0.01%, #FFFFFF 99.99%);
-  -webkit-transition: background 0.6s ease 0s;
-  transition: background 0.6s ease 0s;
+  background-position: 100% center;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 .main-block__button:hover span {
-  background-image: linear-gradient(89.98deg, #FFFFFF 0.01%, #FFFFFF 99.99%);
-  -webkit-transition: background-image 0.6s ease 0s;
-  transition: background-image 0.6s ease 0s;
+  background-position: 100% center;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 @-webkit-keyframes marquee {
@@ -1335,6 +1339,19 @@ section:not(:last-child) {
   padding: 35px 36px 26px 31px;
   border: 2px solid #141414;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .slid__title {
   font-family: "Ubuntu";
@@ -1342,8 +1359,13 @@ section:not(:last-child) {
   font-weight: 500;
   font-size: 30px;
   line-height: 113.3333333333%;
+  margin-left: 0;
+  margin-right: auto;
 }
 .slid__title:not(:last-child) {
+  margin-bottom: 15px;
+}
+.slid__block:not(:last-child) {
   margin-bottom: 15px;
 }
 .slid__body {
@@ -1368,9 +1390,6 @@ section:not(:last-child) {
 }
 .slid__text span {
   color: rgb(7, 182, 4);
-}
-.slid__text:not(:last-child) {
-  margin-bottom: 15px;
 }
 .slid__buttons {
   display: -webkit-box;
@@ -1463,12 +1482,12 @@ section:not(:last-child) {
   .slid__title:not(:last-child) {
     margin-bottom: 10px;
   }
+  .slid__block:not(:last-child) {
+    margin-bottom: 28px;
+  }
   .slid__text {
     margin-left: 10px;
     font-size: 15px;
-  }
-  .slid__text:not(:last-child) {
-    margin-bottom: 28px;
   }
   .slid__buttons {
     gap: 33px;
